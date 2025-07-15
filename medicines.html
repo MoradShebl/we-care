@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicines - We Care</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__brand">
+                <a href="hero.html" class="nav__logo">
+                    <span class="nav__logo-text">We Care</span>
+                </a>
+            </div>
+            
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="hero.html" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="medicines.html" class="nav__link nav__link--active">Medicines</a>
+                </li>
+                <li class="nav__item">
+                    <a href="hero.html#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="hero.html#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav__hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Medicines Header -->
+    <section class="medicines-header">
+        <div class="medicines-header__container">
+            <h1 class="medicines-header__title">Medicine Shortage Tracker</h1>
+            <p class="medicines-header__subtitle">
+                Monitor current medicine availability and find alternatives
+            </p>
+        </div>
+    </section>
+
+    <!-- Medicines Controls -->
+    <section class="medicines-controls">
+        <div class="medicines-controls__container">
+            <div class="search-bar">
+                <input type="text" 
+                       class="search-bar__input" 
+                       id="medicine-search" 
+                       placeholder="Search medicines..."
+                       aria-label="Search medicines">
+                <button class="search-bar__button" type="button" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="filters">
+                <select class="filter-select" id="category-filter" aria-label="Filter by category">
+                    <option value="">All Categories</option>
+                    <option value="antibiotic">Antibiotics</option>
+                    <option value="painkiller">Painkillers</option>
+                    <option value="cardiovascular">Cardiovascular</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="respiratory">Respiratory</option>
+                    <option value="mental-health">Mental Health</option>
+                </select>
+                
+                <select class="filter-select" id="status-filter" aria-label="Filter by availability status">
+                    <option value="">All Status</option>
+                    <option value="available">Available</option>
+                    <option value="low-stock">Low Stock</option>
+                    <option value="out-of-stock">Out of Stock</option>
+                </select>
+                
+                <select class="filter-select" id="priority-filter" aria-label="Filter by priority">
+                    <option value="">All Priorities</option>
+                    <option value="critical">Critical</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            
+            <div class="sort-controls">
+                <label for="sort-select" class="sort-controls__label">Sort by:</label>
+                <select class="sort-select" id="sort-select" aria-label="Sort medicines">
+                    <option value="name">Name</option>
+                    <option value="availability">Availability</option>
+                    <option value="priority">Priority</option>
+                    <option value="updated">Last Updated</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicines Grid -->
+    <section class="medicines-grid">
+        <div class="medicines-grid__container">
+            <div class="medicines-grid__header">
+                <h2 class="medicines-grid__title">Current Medicine Status</h2>
+                <div class="medicines-grid__count">
+                    <span id="medicines-count">0</span> medicines found
+                </div>
+            </div>
+            
+            <div class="medicines-grid__content" id="medicines-container">
+                <!-- Medicine cards will be populated by JavaScript -->
+            </div>
+            
+            <div class="medicines-grid__empty" id="empty-state" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <h3>No medicines found</h3>
+                <p>Try adjusting your search or filters</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__title">We Care</h3>
+                    <p class="footer__description">
+                        Bridging the gap in medicine shortages with reliable tracking and alternatives.
+                    </p>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="hero.html" class="footer__link">Home</a></li>
+                        <li><a href="medicines.html" class="footer__link">Medicines</a></li>
+                        <li><a href="hero.html#about" class="footer__link">About</a></li>
+                        <li><a href="hero.html#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact Info</h4>
+                    <p class="footer__contact-item">+1 (555) 123-4567</p>
+                    <p class="footer__contact-item">info@wecare.com</p>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2024 We Care. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/medicines.js"></script>
+</body>
+</html>
